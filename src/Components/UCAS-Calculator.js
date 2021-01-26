@@ -64,10 +64,6 @@ export default class NewCalculator extends Component {
   }
 
   onChange = ({ target: { value } }) => {
-    var inputval = value;
-    this.setState({ dataValue: inputval });
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode([value]);
     [gradeclass] = [value];
     this.setState({ courseid: value });
     this.getCourseGrades();
@@ -91,8 +87,6 @@ export default class NewCalculator extends Component {
   }
 
   render() {
-    const { dataValue } = this.state;
-    const { courselist } = this.state.courseid;
     return (
       <Container id="mainElement">
         <QualficationContainer>
