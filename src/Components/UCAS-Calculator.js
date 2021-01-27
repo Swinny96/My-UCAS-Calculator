@@ -169,7 +169,7 @@ export default class NewCalculator extends Component {
             ))}
           </Select>
           <Select id="GradesSelection" onChange={this.handleChange}>
-            <Option value="0">Select an grade</Option>
+            <Option value="0">Select an Grade</Option>
             {this.state.gradelist.map((i) => (
               <Option key={i[0]} value={i[1]} id={i[1]}>
                 {i[0]}
@@ -220,7 +220,7 @@ export default class NewCalculator extends Component {
         </DeleteLastQualfication>
         <hr />
         <PointsText>Your UCAS Points Total: </PointsText>
-        <PointsTotal id="PointsID">0</PointsTotal>
+        <PointsTotal id="PointsID"></PointsTotal>
       </Container>
     );
   }
@@ -236,6 +236,10 @@ const QualficationContainer = styled.div`
   grid-template-columns: auto auto;
   width: 100%;
   max-width: 800px;
+
+  @media only screen and (max-width: 600px){
+    grid-template-columns: auto;
+  }
 `;
 
 const AddQualfication = styled.button`
@@ -304,6 +308,7 @@ const Select = styled.select`
   background: #fff;
   height: 40px;
   max-width: 400px;
+  width: 100%;
   border: 3px solid;
   border-color: #f10427;
   color: #333;
@@ -314,6 +319,12 @@ const Select = styled.select`
   font-size: 14px;
   margin-right: 8px;
   cursor: pointer;
+
+  @media only screen and (max-width: 600px){
+    margin-top: 8px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
 
   :hover {
     box-shadow: 4px 4px #e00223;
