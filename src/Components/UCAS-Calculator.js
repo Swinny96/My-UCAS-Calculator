@@ -5,6 +5,22 @@ const GradeUrl = "https://www.ucas.com/api/tariff/v1/view/";
 const CourseUrl = "https://www.ucas.com/api/tariff/v1/list/";
 var gradeclass = "";
 
+const sortList = (key) => {
+  document.getElementById = "CourseSelection";
+  let arrayCopy = [...this.state.courselist];
+  arrayCopy.sort((a, b) => a[1] > b[1]);
+  this.setState({ users: arrayCopy });
+};
+
+function orderListByKey(data, key, order) {
+  const compareValues = (key, order = "asc") => (elemA, elemB) => {
+    if (!elemA.hasOwnProperty(key) || !elemB.hasOwnProperty(key)) return 0;
+    const comparison = elemA[key].localeCompare(elemB[key]);
+    return order === "desc" ? comparison * -1 : comparison;
+  };
+  return data.sort(compareValues(key, order));
+}
+
 export default class NewCalculator extends Component {
   constructor(props) {
     super(props);
@@ -83,8 +99,24 @@ export default class NewCalculator extends Component {
     const courses_data = await courses_response.json();
     var courses_result = [];
     for (var i in courses_data) courses_result.push([i, courses_data[i]]);
+    courses_result.sort((a, b) => {
+      let fa = a[1].toLowerCase(),
+          fb = b[1].toLowerCase();
+  
+      if (fa < fb) {
+          return -1;
+      }
+      if (fa > fb) {
+          return 1;
+      }
+      return 0;
+  });
     this.setState({ courselist: courses_result, loading: false });
+
+   
   }
+
+  
 
   render() {
     return (
@@ -181,6 +213,7 @@ const AddQualfication = styled.button`
   transition: 0.8s;
   font-size: 14px;
   margin: 8px 0px;
+  cursor: pointer;
 
   :hover {
     box-shadow: 4px 4px #e00223;
@@ -198,6 +231,7 @@ const DeleteQualfication = styled.button`
   font-weight: bold;
   transition: 0.8s;
   font-size: 14px;
+  cursor: pointer;
 
   :hover {
     box-shadow: 4px 4px #e00223;
@@ -216,6 +250,8 @@ const DeleteLastQualfication = styled.button`
   font-weight: bold;
   transition: 0.8s;
   font-size: 14px;
+  cursor: pointer;
+  cursor: pointer;
 
   :hover {
     box-shadow: 4px 4px #e00223;
@@ -239,6 +275,7 @@ const Select = styled.select`
   transition: 0.6s;
   font-size: 14px;
   margin-right: 8px;
+  cursor: pointer;
 
   :hover {
     box-shadow: 4px 4px #e00223;
