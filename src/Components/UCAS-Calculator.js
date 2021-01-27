@@ -84,11 +84,12 @@ export default class NewCalculator extends Component {
     var courses_result = [];
     for (var i in courses_data) courses_result.push([i, courses_data[i]]);
     courses_result.sort(function (a, b) {
-      var a1 = a[1], b1 = b[1];
+      var a1 = a[1],
+        b1 = b[1];
       if (a1 == b1) return 0;
 
       //Put A and AS Level qualifications first, then a-z
-      if (a1 == 'A level') return -1;
+      if (a1 == "A level") return -1;
       if (b1 == "A level") return 1;
       if (a1 == "A level (9 unit award)") return -1;
       if (b1 == "A level (9 unit award)") return 1;
@@ -99,21 +100,60 @@ export default class NewCalculator extends Component {
       if (a1 == "AS Double award") return -1;
       if (b1 == "AS Double award") return 1;
 
-      if (a1 == "Pearson BTEC Level 3 National Certificate (first teaching from September 2016)") return -1;
-      if (b1 == "Pearson BTEC Level 3 National Certificate (first teaching from September 2016)") return 1;
-      if (a1 == "Pearson BTEC Level 3 National Diploma (first teaching from September 2016)") return -1;
-      if (b1 == "Pearson BTEC Level 3 National Diploma (first teaching from September 2016)") return 1;
-      if (a1 == "Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)") return -1;
-      if (b1 == "Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)") return 1;
-      if (a1 == "Pearson BTEC Level 3 National Extended Diploma (first teaching from September 2016)") return -1;
-      if (b1 == "Pearson BTEC Level 3 National Extended Diploma (first teaching from September 2016)") return 1;
-      if (a1 == "Pearson BTEC Level 3 National Foundation Diploma (first teaching from September 2016)") return -1;
-      if (b1 == "Pearson BTEC Level 3 National Foundation Diploma (first teaching from September 2016)") return 1;
+      if (
+        a1 ==
+        "Pearson BTEC Level 3 National Certificate (first teaching from September 2016)"
+      )
+        return -1;
+      if (
+        b1 ==
+        "Pearson BTEC Level 3 National Certificate (first teaching from September 2016)"
+      )
+        return 1;
+      if (
+        a1 ==
+        "Pearson BTEC Level 3 National Diploma (first teaching from September 2016)"
+      )
+        return -1;
+      if (
+        b1 ==
+        "Pearson BTEC Level 3 National Diploma (first teaching from September 2016)"
+      )
+        return 1;
+      if (
+        a1 ==
+        "Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)"
+      )
+        return -1;
+      if (
+        b1 ==
+        "Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)"
+      )
+        return 1;
+      if (
+        a1 ==
+        "Pearson BTEC Level 3 National Extended Diploma (first teaching from September 2016)"
+      )
+        return -1;
+      if (
+        b1 ==
+        "Pearson BTEC Level 3 National Extended Diploma (first teaching from September 2016)"
+      )
+        return 1;
+      if (
+        a1 ==
+        "Pearson BTEC Level 3 National Foundation Diploma (first teaching from September 2016)"
+      )
+        return -1;
+      if (
+        b1 ==
+        "Pearson BTEC Level 3 National Foundation Diploma (first teaching from September 2016)"
+      )
+        return 1;
 
-      return a1 > b1 ? 1 : -1;});
+      return a1 > b1 ? 1 : -1;
+    });
     this.setState({ courselist: courses_result, loading: false });
-
-   
   }
 
   render() {
