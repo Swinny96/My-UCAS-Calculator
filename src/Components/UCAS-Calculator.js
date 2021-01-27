@@ -5,22 +5,6 @@ const GradeUrl = "https://www.ucas.com/api/tariff/v1/view/";
 const CourseUrl = "https://www.ucas.com/api/tariff/v1/list/";
 var gradeclass = "";
 
-const sortList = (key) => {
-  document.getElementById = "CourseSelection";
-  let arrayCopy = [...this.state.courselist];
-  arrayCopy.sort((a, b) => a[1] > b[1]);
-  this.setState({ users: arrayCopy });
-};
-
-function orderListByKey(data, key, order) {
-  const compareValues = (key, order = "asc") => (elemA, elemB) => {
-    if (!elemA.hasOwnProperty(key) || !elemB.hasOwnProperty(key)) return 0;
-    const comparison = elemA[key].localeCompare(elemB[key]);
-    return order === "desc" ? comparison * -1 : comparison;
-  };
-  return data.sort(compareValues(key, order));
-}
-
 export default class NewCalculator extends Component {
   constructor(props) {
     super(props);
@@ -101,29 +85,25 @@ export default class NewCalculator extends Component {
     for (var i in courses_data) courses_result.push([i, courses_data[i]]);
     courses_result.sort((a, b) => {
       let fa = a[1].toLowerCase(),
-          fb = b[1].toLowerCase();
-  
+        fb = b[1].toLowerCase();
+
       if (fa < fb) {
-          return -1;
+        return -1;
       }
       if (fa > fb) {
-          return 1;
+        return 1;
       }
       return 0;
-  });
+    });
     this.setState({ courselist: courses_result, loading: false });
-
-   
   }
-
-  
 
   render() {
     return (
       <Container id="mainElement">
         <QualficationContainer>
           <Select id="CourseSelection" onChange={this.onChange}>
-            <Option value="0">Select a Qualfication</Option>
+            <Option value="0">Select an Qualfication</Option>
             {this.state.courselist.map((i) => (
               <Option key={i[0]} value={i[0]} id={i[1]}>
                 {i[1]}
