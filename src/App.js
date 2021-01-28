@@ -1,44 +1,43 @@
 import logo from "./logo.svg";
-import styled from "styled-components";
 import "./App.css";
 import UCASCalculator from "./Components/UCAS-Calculator";
+import "./Calculator.css";
 
 function App() {
   return (
-    <Container>
-      <Header>
-        <Logo src={logo} />
-        <Heading>Calculator</Heading>
-      </Header>
-      <Content>
-        <Context>
+    <div className="page_container">
+      <header>
+        <img className="ucas-logo" src={logo} />
+        <h1 className="header_text">Calculator</h1>
+      </header>
+      <main>
+        <p className="ucas-context">
           Working out your UCAS points can be a pain - especially when you have
           different types of qualifications. Luckily, our calculator is here to
           help. Just add your qualifications and let our UCAS Calculator do the
           maths!
-        </Context>
-        <UCASCalculator />
-      </Content>
-    </Container>
+        </p>
+        <UCASCalculator
+          container="container"
+          qualfication_container="qualfication_container"
+          select="select"
+          add_qualfication="add_qualfication"
+          table="table"
+          table_header="table_header"
+          table_row="table_row"
+          table_head="table_head"
+          table_body="table_body"
+          table_body_row="table_body_row"
+          table_body_details="table_body_details"
+          delete_qualfication="delete_qualfication"
+          delete_last_qualfication="delete_last_qualfication"
+          points="points"
+          points_text="points_text"
+          points_total="points_total"
+        />
+      </main>
+    </div>
   );
 }
 
 export default App;
-
-const Container = styled.div`
-  margin: 24px;
-`;
-const Header = styled.header`
-  display: inline-flex;
-  margin-bottom: 20px;
-`;
-const Heading = styled.h1`
-  margin: 0px 20px;
-`;
-const Logo = styled.img`
-  height: 40px;
-`;
-const Content = styled.main``;
-const Context = styled.p`
-  max-width: 600px;
-`;

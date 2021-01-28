@@ -4,3 +4,20 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
+
+.page_container {
+  margin: 24px;
+}
+header {
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+.ucas-logo {
+  height: 40px;
+}
+.header_text {
+  margin: 0px 20px;
+}
+.ucas-context {
+  max-width: 600px;
+}

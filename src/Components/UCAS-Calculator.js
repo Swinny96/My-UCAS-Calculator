@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
 const GradeUrl = "https://www.ucas.com/api/tariff/v1/view/";
 const CourseUrl = "https://www.ucas.com/api/tariff/v1/list/";
 var gradeclass = "";
 
-export default class NewCalculator extends Component {
+export default class UCASCalculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -158,207 +157,89 @@ export default class NewCalculator extends Component {
 
   render() {
     return (
-      <Container id="mainElement">
-        <QualficationContainer>
-          <Select id="CourseSelection" onChange={this.onChange}>
-            <Option value="0">Select an Qualfication</Option>
+      <div className={this.props.container} id="mainElement">
+        <div className={this.props.qualfication_container}>
+          <select
+            className={this.props.select}
+            id="CourseSelection"
+            onChange={this.onChange}
+          >
+            <option value="0">Select an Qualfication</option>
             {this.state.courselist.map((i) => (
-              <Option key={i[0]} value={i[0]} id={i[1]}>
+              <option key={i[0]} value={i[0]} id={i[1]}>
                 {i[1]}
-              </Option>
+              </option>
             ))}
-          </Select>
-          <Select id="GradesSelection" onChange={this.handleChange}>
-            <Option value="0">Select an Grade</Option>
+          </select>
+          <select
+            className={this.props.select}
+            id="GradesSelection"
+            onChange={this.handleChange}
+          >
+            <option value="0">Select an Grade</option>
             {this.state.gradelist.map((i) => (
-              <Option key={i[0]} value={i[1]} id={i[1]}>
+              <option key={i[0]} value={i[1]} id={i[1]}>
                 {i[0]}
-              </Option>
+              </option>
             ))}
-          </Select>
-        </QualficationContainer>
-        <AddQualfication onClick={this.handleAddRow}>
+          </select>
+        </div>
+        <button
+          className={this.props.add_qualfication}
+          onClick={this.handleAddRow}
+        >
           Add Qualfication
-        </AddQualfication>
+        </button>
         <hr />
-        <PointsTable>
-          <PointsHeader>
-            <PointsRow>
-              <PointsHead>#</PointsHead>
-              <PointsHead>Course</PointsHead>
-              <PointsHead>Grade</PointsHead>
-              <PointsHead>UCAS Points</PointsHead>
-              <PointsHead />
-            </PointsRow>
-          </PointsHeader>
-          <PointsBody>
+        <table className={this.props.table}>
+          <thead className={this.props.table_header}>
+            <tr className={this.props.table_row}>
+              <th className={this.props.table_head}>#</th>
+              <th className={this.props.table_head}>Course</th>
+              <th className={this.props.table_head}>Grade</th>
+              <th className={this.props.table_head}>UCAS Points</th>
+              <th className={this.props.table_head} />
+            </tr>
+          </thead>
+          <tbody className={this.props.table_body}>
             {this.state.rows.map((item, idx) => (
-              <QualficationRow key={idx}>
-                <PointsDetails>{idx}</PointsDetails>
-                <PointsDetails name="name">
+              <tr key={idx} className={this.props.table_body_row}>
+                <td className={this.props.table_body_details}>{idx}</td>
+                <td className={this.props.table_body_details} name="name">
                   {this.state.rows[idx].name}
-                </PointsDetails>
-                <PointsDetails name="grade">
+                </td>
+                <td className={this.props.table_body_details} name="grade">
                   {this.state.rows[idx].grade}
-                </PointsDetails>
-                <PointsDetails name="points">
+                </td>
+                <td className={this.props.table_body_details} name="points">
                   {this.state.rows[idx].points}
-                </PointsDetails>
-                <PointsDetails>
-                  <DeleteQualfication
+                </td>
+                <td className={this.props.table_body_details}>
+                  <button
+                    className={this.props.delete_qualfication}
                     onClick={this.handleRemoveSpecificRow(idx)}
                   >
                     Remove
-                  </DeleteQualfication>
-                </PointsDetails>
-              </QualficationRow>
+                  </button>
+                </td>
+              </tr>
             ))}
-          </PointsBody>
-        </PointsTable>
-        <DeleteLastQualfication onClick={this.handleRemoveRow}>
+          </tbody>
+        </table>
+        <button
+          className={this.props.delete_last_qualfication}
+          onClick={this.handleRemoveRow}
+        >
           Delete Last Qualfication
-        </DeleteLastQualfication>
+        </button>
         <hr />
-        <PointsText>Your UCAS Points Total: </PointsText>
-        <PointsTotal id="PointsID"></PointsTotal>
-      </Container>
+        <div className={this.props.points}>
+          <span className={this.props.points_text}>
+            Your UCAS Points Total:{" "}
+          </span>
+          <strong className={this.props.points_total} id="PointsID"></strong>
+        </div>
+      </div>
     );
   }
 }
-
-const Container = styled.div`
-  max-width: 600px;
-  width: 100%;
-`;
-
-const QualficationContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  width: 100%;
-  max-width: 800px;
-
-  @media only screen and (max-width: 600px){
-    grid-template-columns: auto;
-  }
-`;
-
-const AddQualfication = styled.button`
-  background: #e00223;
-  height: 40px;
-  width: 100%;
-  border: 3px solid;
-  border-color: #f10427;
-  color: #fff;
-  border-radius: 40px;
-  padding: 6px 12px;
-  font-weight: bold;
-  transition: 0.8s;
-  font-size: 14px;
-  margin: 8px 0px;
-  cursor: pointer;
-
-  :hover {
-    box-shadow: 4px 4px #e00223;
-  }
-`;
-const DeleteQualfication = styled.button`
-  width: 100%;
-  height: 40px;
-  background: #e00223;
-  border: 3px solid;
-  border-color: #f10427;
-  color: #fff;
-  border-radius: 40px;
-  padding: 6px 12px;
-  font-weight: bold;
-  transition: 0.8s;
-  font-size: 14px;
-  cursor: pointer;
-
-  :hover {
-    box-shadow: 4px 4px #e00223;
-  }
-`;
-const DeleteLastQualfication = styled.button`
-  width: 100%;
-  height: 40px;
-  margin-top: 8px;
-  background: #e00223;
-  border: 3px solid;
-  border-color: #f10427;
-  color: #fff;
-  border-radius: 40px;
-  padding: 6px 12px;
-  font-weight: bold;
-  transition: 0.8s;
-  font-size: 14px;
-  cursor: pointer;
-  cursor: pointer;
-
-  :hover {
-    box-shadow: 4px 4px #e00223;
-  }
-`;
-const PointsText = styled.span`
-  font-weight: 600;
-`;
-const PointsTotal = styled.strong``;
-
-const Select = styled.select`
-  background: #fff;
-  height: 40px;
-  max-width: 400px;
-  width: 100%;
-  border: 3px solid;
-  border-color: #f10427;
-  color: #333;
-  border-radius: 40px;
-  padding: 6px 12px;
-  font-weight: bold;
-  transition: 0.6s;
-  font-size: 14px;
-  margin-right: 8px;
-  cursor: pointer;
-
-  @media only screen and (max-width: 600px){
-    margin-top: 8px;
-    margin-right: 0px;
-    max-width: 100%;
-  }
-
-  :hover {
-    box-shadow: 4px 4px #e00223;
-    margin-bottom: 4px;
-  }
-  :active {
-    box-shadow: 4px 4px #e00223;
-    margin-bottom: 4px;
-  }
-  :focus {
-    box-shadow: 4px 4px #e00223;
-    margin-bottom: 4px;
-  }
-`;
-const Option = styled.option``;
-const PointsTable = styled.table`
-  width: 100%;
-  margin: 8px;
-  text-align: left;
-`;
-const PointsRow = styled.tr``;
-const QualficationRow = styled.tr`
-  font-weight: bold;
-  :nth-child(1) {
-    display: none;
-  }
-`;
-const PointsHeader = styled.thead``;
-const PointsHead = styled.th`
-  text-align: center;
-`;
-const PointsBody = styled.tbody`
-  width: 100%;
-`;
-const PointsDetails = styled.td`
-  text-align: center;
-`;
