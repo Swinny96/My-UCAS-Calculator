@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="page_container">
       <header>
-        <img className="ucas-logo" src={logo} />
+        <img className="ucas-logo" src={logo} alt="UCAS Logo" />
         <h1 className="header_text">Calculator</h1>
       </header>
       <main>
