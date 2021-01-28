@@ -158,86 +158,106 @@ export default class UCASCalculator extends Component {
   render() {
     return (
       <div className={this.props.container} id="mainElement">
-        <div className={this.props.qualfication_container}>
-          <select
-            className={this.props.select}
-            id="CourseSelection"
-            onChange={this.onChange}
+        <div className={this.props.container_inner}>
+          <h4 className={this.props.header}>
+            <span className={this.props.meta_text}>UCAS Calculator</span>
+          </h4>
+          <p className={this.props.text}>
+            Working out your UCAS points can be a pain - especially when you
+            have different types of qualifications. Luckily, our calculator is
+            here to help. Just add your qualifications and let our UCAS
+            Calculator do the maths!
+          </p>
+          <div className={this.props.qualfication_container}>
+            <div className={this.props.qualfication_container_qualifcation}>
+              <span className={this.props.qualfication_text}>Qualfication</span>
+              <select
+                className={this.props.select}
+                id="CourseSelection"
+                onChange={this.onChange}
+              >
+                <option value="0">Select an Qualfication</option>
+                {this.state.courselist.map((i) => (
+                  <option key={i[0]} value={i[0]} id={i[1]}>
+                    {i[1]}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={this.props.qualfication_container_grade}>
+              <span className={this.props.qualfication_text}>Grade</span>
+              <select
+                className={this.props.select}
+                id="GradesSelection"
+                onChange={this.handleChange}
+              >
+                <option value="0">Select an Grade</option>
+                {this.state.gradelist.map((i) => (
+                  <option key={i[0]} value={i[1]} id={i[1]}>
+                    {i[0]}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+          <button
+            className={this.props.add_qualfication}
+            onClick={this.handleAddRow}
           >
-            <option value="0">Select an Qualfication</option>
-            {this.state.courselist.map((i) => (
-              <option key={i[0]} value={i[0]} id={i[1]}>
-                {i[1]}
-              </option>
-            ))}
-          </select>
-          <select
-            className={this.props.select}
-            id="GradesSelection"
-            onChange={this.handleChange}
-          >
-            <option value="0">Select an Grade</option>
-            {this.state.gradelist.map((i) => (
-              <option key={i[0]} value={i[1]} id={i[1]}>
-                {i[0]}
-              </option>
-            ))}
-          </select>
-        </div>
-        <button
-          className={this.props.add_qualfication}
-          onClick={this.handleAddRow}
-        >
-          Add Qualfication
-        </button>
-        <hr />
-        <table className={this.props.table}>
-          <thead className={this.props.table_header}>
-            <tr className={this.props.table_row}>
-              <th className={this.props.table_head}>#</th>
-              <th className={this.props.table_head}>Course</th>
-              <th className={this.props.table_head}>Grade</th>
-              <th className={this.props.table_head}>UCAS Points</th>
-              <th className={this.props.table_head} />
-            </tr>
-          </thead>
-          <tbody className={this.props.table_body}>
-            {this.state.rows.map((item, idx) => (
-              <tr key={idx} className={this.props.table_body_row}>
-                <td className={this.props.table_body_details}>{idx}</td>
-                <td className={this.props.table_body_details} name="name">
-                  {this.state.rows[idx].name}
-                </td>
-                <td className={this.props.table_body_details} name="grade">
-                  {this.state.rows[idx].grade}
-                </td>
-                <td className={this.props.table_body_details} name="points">
-                  {this.state.rows[idx].points}
-                </td>
-                <td className={this.props.table_body_details}>
-                  <button
-                    className={this.props.delete_qualfication}
-                    onClick={this.handleRemoveSpecificRow(idx)}
-                  >
-                    Remove
-                  </button>
-                </td>
+            Add Qualfication
+          </button>
+          <hr />
+          <table className={this.props.table}>
+            <thead className={this.props.table_header}>
+              <tr className={this.props.table_row}>
+                <th className={this.props.table_head}>#</th>
+                <th className={this.props.table_head}>Course</th>
+                <th className={this.props.table_head}>Grade</th>
+                <th className={this.props.table_head}>UCAS Points</th>
+                <th className={this.props.table_head} />
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <button
-          className={this.props.delete_last_qualfication}
-          onClick={this.handleRemoveRow}
-        >
-          Delete Last Qualfication
-        </button>
-        <hr />
-        <div className={this.props.points}>
-          <span className={this.props.points_text}>
-            Your UCAS Points Total:{" "}
-          </span>
-          <strong className={this.props.points_total} id="PointsID"></strong>
+            </thead>
+            <tbody className={this.props.table_body}>
+              {this.state.rows.map((item, idx) => (
+                <tr key={idx} className={this.props.table_body_row}>
+                  <td className={this.props.table_body_details}>{idx}</td>
+                  <td className={this.props.table_body_details} name="name">
+                    {this.state.rows[idx].name}
+                  </td>
+                  <td className={this.props.table_body_details} name="grade">
+                    {this.state.rows[idx].grade}
+                  </td>
+                  <td className={this.props.table_body_details} name="points">
+                    {this.state.rows[idx].points}
+                  </td>
+                  <td className={this.props.table_body_details}>
+                    <button
+                      className={this.props.delete_qualfication}
+                      onClick={this.handleRemoveSpecificRow(idx)}
+                    >
+                      <span className={this.props.delete_qualfication_text}>Remove</span>
+                      <img className={this.props.delete_qualfication_button} src={this.props.remove_img} alt="Remove Qualfication"/>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <button
+            className={this.props.delete_last_qualfication}
+            onClick={this.handleRemoveRow}
+          >
+            <span>Delete Last Qualfication</span>
+          </button>
+          <hr />
+          <div className={this.props.points}>
+            <div className={this.props.points_total}>
+              <strong id="PointsID"></strong> UCAS Points
+            </div>
+            <span className={this.props.points_text}>
+              Your total UCAS Points{" "}
+            </span>
+          </div>
         </div>
       </div>
     );
