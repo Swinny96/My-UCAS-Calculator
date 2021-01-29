@@ -2,6 +2,7 @@
   max-width: 1000px;
   width: 100%;
   font-family: "DIN-Pro-Regular";
+  margin: 0 auto;
 }
 .col_1_conatiner_inner {
   display: block;
@@ -43,7 +44,7 @@
 .col_1_qualfication {
   display: block;
 }
-.col_1_qualfication_split{
+.col_1_qualfication_split {
   display: grid;
   grid-area: auto;
 }
