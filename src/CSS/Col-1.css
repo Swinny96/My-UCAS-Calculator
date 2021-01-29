@@ -1,0 +1,157 @@
+.col_1_conatiner {
+  max-width: 1000px;
+  width: 100%;
+  font-family: "DIN-Pro-Regular";
+}
+.col_1_conatiner_inner {
+  display: block;
+}
+.col_1_top {
+  display: grid;
+  grid-template-areas: "a a";
+  grid-auto-columns: 50%;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.col_1_left {
+  display: block;
+}
+.col_1_heading {
+  display: block;
+}
+.col_1_header {
+  opacity: 0.75;
+  color: #000000;
+  font-family: "Aveny-T-Bold";
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 61px;
+  margin: 0px;
+}
+.col_1_meta_text {
+  display: block;
+}
+.col_1_text {
+  color: #000000;
+  font-family: "DIN-Pro-Regular";
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.col_1_qualfication {
+  display: block;
+}
+.col_1_qualfication_split{
+  display: grid;
+  grid-area: auto;
+}
+.col_1_qualfication_qual {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.col_1_qualfication_grade {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.col_1_qualfication_text {
+  color: #131313;
+  font-family: "DIN-Pro-Regular";
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.col_1_select {
+  width: 100%;
+  padding: 6px 0px;
+  color: #767676;
+  border: 1px #767676;
+  border-style: none none solid none;
+}
+.col_1_add {
+  padding: 12px 30px;
+  border: 2px solid #753bbd;
+  background: #753bbd;
+  color: #fff;
+  font-family: "DIN-Pro-Regular";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.col_1_add:hover {
+  background: #fff;
+  color: #753bbd;
+}
+.col_1_table {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  font-family: "DIN-Pro-Bold";
+  width: 100%;
+}
+.col_1_thead {
+  height: 70px;
+  width: 100%;
+  background-color: #fff;
+}
+.col_1_tr {
+  background-color: #fff;
+}
+.col_1_th {
+  background-color: #fff;
+  padding: 25px;
+}
+.col_1_tbody {
+  border: solid 1px #ddd;
+  font-family: "DIN-Pro-Regular";
+}
+.col_1_tbr {
+  background-color: #ddd;
+}
+.col_1_tbr:nth-child(1) {
+  display: none;
+}
+.col_1_td {
+  padding: 25px;
+}
+.col_1_delete {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 0px;
+  cursor: pointer;
+}
+.col_1_delete_text {
+  color: #753bbd;
+  font-family: "DIN-Pro-Bold";
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-right: 10px;
+}
+.col_1_delete_btn {
+  width: 20px;
+  height: 20px;
+}
+.col_1_delete_last {
+  display: none;
+}
+.col_1_points {
+  background: #753bbd;
+  padding: 25px;
+  font-family: "Aveny-T-Light";
+  font-weight: bold;
+  font-size: 64px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.col_1_points_id {
+  font-family: "Aveny-T-Bold";
+}

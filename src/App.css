@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: DINPro, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: Aveny-T-Bold, Aveny-T-Light, DIN-Pro-Bold, DIN-Pro-Medium,
+    DIN-Pro-Regular;
   color: #131313;
 }
 
@@ -17,7 +17,17 @@ header {
 }
 .header_text {
   margin: 0px 20px;
+  font-family: "Aveny-T-Bold";
 }
 .ucas-context {
   max-width: 600px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Aveny-T-Bold";
+}
+p {
+  font-family: "Aveny-T-Light";
 }

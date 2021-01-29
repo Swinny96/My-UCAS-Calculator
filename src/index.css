@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Aveny-T-Bold";
+  src: local("Aveny-T-Bold"),
+    url("./Fonts/aveny-t-bold.woff2") format("truetype");
+}
+@font-face {
+  font-family: "Aveny-T-Light";
+  src: local("Aveny-T-Light"),
+    url("./Fonts/aveny-t-light.woff2") format("truetype");
+}
+@font-face {
+  font-family: "DIN-Pro-Bold";
+  src: local("DIN-Pro-Bold"),
+    url("./Fonts/din-pro-bold.woff2") format("truetype");
+}
+@font-face {
+  font-family: "DIN-Pro-Medium";
+  src: local("DIN-Pro-Medium"),
+    url("./Fonts/din-pro-medium.woff2") format("truetype");
+}
+@font-face {
+  font-family: "DIN-Pro-Regular";
+  src: local("DIN-Pro-Regular"),
+    url("./Fonts/din-pro-regular.woff2") format("truetype");
+}
