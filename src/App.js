@@ -80,6 +80,7 @@ function App() {
           meta_text="col_1_meta_text"
           text="col_1_text"
           qualfication_container="col_1_qualfication"
+          qualfication_container_split="col_1_qualfication_split"
           qualfication_container_qualifcation="col_1_qualfication_qual"
           qualfication_container_grade="col_1_qualfication_grade"
           qualfication_text="col_1_qualfication_text"

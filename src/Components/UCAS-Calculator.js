@@ -174,37 +174,39 @@ export default class UCASCalculator extends Component {
               </p>
             </div>
             <div className={this.props.qualfication_container}>
-              <div className={this.props.qualfication_container_qualifcation}>
-                <span className={this.props.qualfication_text}>
-                  Qualfication
-                </span>
-                <select
-                  className={this.props.select}
-                  id="CourseSelection"
-                  onChange={this.onChange}
-                >
-                  <option value="0">Select an Qualfication</option>
-                  {this.state.courselist.map((i) => (
-                    <option key={i[0]} value={i[0]} id={i[1]}>
-                      {i[1]}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className={this.props.qualfication_container_grade}>
-                <span className={this.props.qualfication_text}>Grade</span>
-                <select
-                  className={this.props.select}
-                  id="GradesSelection"
-                  onChange={this.handleChange}
-                >
-                  <option value="0">Select an Grade</option>
-                  {this.state.gradelist.map((i) => (
-                    <option key={i[0]} value={i[1]} id={i[1]}>
-                      {i[0]}
-                    </option>
-                  ))}
-                </select>
+              <div className={this.props.qualfication_container_split}>
+                <div className={this.props.qualfication_container_qualifcation}>
+                  <span className={this.props.qualfication_text}>
+                    Qualfication
+                  </span>
+                  <select
+                    className={this.props.select}
+                    id="CourseSelection"
+                    onChange={this.onChange}
+                  >
+                    <option value="0">Select an Qualfication</option>
+                    {this.state.courselist.map((i) => (
+                      <option key={i[0]} value={i[0]} id={i[1]}>
+                        {i[1]}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className={this.props.qualfication_container_grade}>
+                  <span className={this.props.qualfication_text}>Grade</span>
+                  <select
+                    className={this.props.select}
+                    id="GradesSelection"
+                    onChange={this.handleChange}
+                  >
+                    <option value="0">Select an Grade</option>
+                    {this.state.gradelist.map((i) => (
+                      <option key={i[0]} value={i[1]} id={i[1]}>
+                        {i[0]}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               <button
                 className={this.props.add_qualfication}
