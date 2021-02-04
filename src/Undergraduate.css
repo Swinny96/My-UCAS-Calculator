@@ -1,13 +1,11 @@
 body {
-  font-family: DINPro, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: "DIN-Pro-Regular";
   color: #131313;
 }
 .content_box {
   display: flex;
   border: 1px solid #ddd;
-  min-width: calc((((100% + 30px) / 12) - 30px) * 6 + 150px);
-  max-width: calc((((100% + 30px) / 12) - 30px) * 6 + 150px);
+  max-width: 560px;
   background-color: #f3f3f3;
   padding: 30px;
 }
@@ -21,8 +19,6 @@ body {
   color: #767676;
 }
 .content_box_heading_meta_text {
-  font-family: DINPro, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 0.625rem;
   font-weight: 400;
   line-height: 1.4;
@@ -31,8 +27,6 @@ body {
   margin-bottom: 8px;
 }
 .richtext {
-  font-family: DINPro, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 0.875rem;
   line-height: 1.57;
   margin: 15px 0;
@@ -58,7 +52,6 @@ body {
   .key-info__items {
     grid-gap: 30px;
     grid-template-areas: "a b";
-    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
   }
   .key-info_item-value {
@@ -66,9 +59,16 @@ body {
     line-height: 0.92;
   }
 }
+@media (max-width: 768px) {
+  .qualfication_conetents_add {
+    width: 100% !important;
+  }
+  .qualfication_qualfication_conetents_split {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none !important;
+  }
+}
 .content_box_heading_meta_text {
-  font-family: DINPro, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 0.625rem;
   font-weight: 400;
   line-height: 1.4;
@@ -76,15 +76,24 @@ body {
   align-items: center;
 }
 .qualfication_conetents {
-  display: grid;
-  gap: 10px;
+  display: block;
   margin-top: 16px;
 }
+.qualfication_qualfication_conetents_split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
 .qualfication_conetent_qualfication {
-  grid-column: 1;
+  display: grid;
+  grid-gap: 10px;
+  gap: 10px;
 }
 .qualfication_conetent_grade {
-  grid-column: 2;
+  display: grid;
+  grid-gap: 10px;
+  gap: 10px;
 }
 .qualfication_conetents_text {
   border: none;
@@ -124,7 +133,6 @@ body {
   border: 2px solid hsl(267, 52%, 49%);
   width: 35%;
   padding: 15px;
-  margin: 20px 0px;
   background: hsl(267, 52%, 49%);
   color: hsl(0, 0%, 100%);
   font-weight: 600;
@@ -193,7 +201,6 @@ body {
     "a"
     "b";
   grid-template-columns: 1fr;
-  display: -ms-grid;
   display: grid;
   display: flex;
   flex-direction: column;
@@ -201,8 +208,7 @@ body {
   padding: 20px;
 }
 .key-info_items-title-cta {
-  font-family: AvenyT, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: "Aveny-T-Bold";
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1;
@@ -211,4 +217,7 @@ body {
 .key_info_items_title {
   margin-top: 10px;
   font-size: 0.75rem;
+}
+#PointsID {
+  margin-right: 6px;
 }

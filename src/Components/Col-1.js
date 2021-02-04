@@ -4,7 +4,7 @@ const GradeUrl = "https://www.ucas.com/api/tariff/v1/view/";
 const CourseUrl = "https://www.ucas.com/api/tariff/v1/list/";
 var gradeclass = "";
 
-export default class UCASCalculator extends Component {
+export default class Col1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -222,13 +222,13 @@ export default class UCASCalculator extends Component {
                   </select>
                 </div>
               </div>
+              <button
+                className={this.props.add_qualfication}
+                onClick={this.handleAddRow}
+              >
+                Add Qualfication
+              </button>
             </div>
-            <button
-              className={this.props.add_qualfication}
-              onClick={this.handleAddRow}
-            >
-              Add Qualfication
-            </button>
           </div>
           <hr />
           <table className={this.props.table}>
@@ -282,8 +282,8 @@ export default class UCASCalculator extends Component {
           <hr />
           <div className={this.props.points}>
             <div className={this.props.points_total}>
+              {this.props.points_txt}
               <strong className={this.props.ponts_id} id="PointsID"></strong>
-              UCAS Points
             </div>
           </div>
         </div>

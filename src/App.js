@@ -1,5 +1,7 @@
 import "./App.css";
 import UCASCalculator from "./Components/UCAS-Calculator";
+import Col1 from "./Components/Col-1";
+// import Col2 from "./Components/Col-2";
 import "./Calculator.css";
 import "./Undergraduate.css";
 import "./CSS/Col-1.css";
@@ -7,7 +9,6 @@ import "./CSS/Col-2.css";
 import "./CSS/Microcomponent.css";
 import "./CSS/Microcomponent-Varient.css";
 import remove from "./remove.svg";
-// import Col2 from "./Components/Col-2";
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
           points_total="points_total"
           points_text="points_text"
         /> */}
-        {/* Micro-UCAS         
+        {/* Micro-UCAS */}
         <UCASCalculator
           container="content_box"
           container_inner="content_box_inner"
@@ -50,6 +51,7 @@ function App() {
           meta_text="content_box_heading_meta_text"
           text="richtext"
           qualfication_container="qualfication_conetents"
+          qualfication_container_split="qualfication_qualfication_conetents_split"
           qualfication_container_qualifcation="qualfication_conetent_qualfication"
           qualfication_container_grade="qualfication_conetent_grade"
           qualfication_text="qualfication_conetents_text"
@@ -70,9 +72,9 @@ function App() {
           points="key_info key-info_items"
           points_total="key-info_items-title-cta"
           points_text="key_info_items_title"
-        /> */}
-        {/* 1-Coll UCAS Calc */}
-        <UCASCalculator
+        />
+        {/* 1-Coll UCAS Calc 
+        <Col1
           container="col_1_conatiner"
           container_inner="col_1_conatiner_inner"
           top="col_1_top"
@@ -105,7 +107,7 @@ function App() {
           points_text="col_1_points_text"
           points_txt="Your UCAS Points Total:"
           ponts_id="col_1_points_id"
-        />
+        />*/}
         {/* 2-Coll UCAS Calc 
         <Col2
           container="col_2_conatiner"
