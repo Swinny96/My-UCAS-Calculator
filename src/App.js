@@ -42,7 +42,7 @@ function App() {
           points_total="points_total"
           points_text="points_text"
         /> */}
-        {/* Micro-UCAS */}
+        {/* Micro-UCAS 
         <UCASCalculator
           container="content_box"
           container_inner="content_box_inner"
@@ -72,8 +72,8 @@ function App() {
           points="key_info key-info_items"
           points_total="key-info_items-title-cta"
           points_text="key_info_items_title"
-        />
-        {/* 1-Coll UCAS Calc 
+        />*/}
+        {/* 1-Coll UCAS Calc */}
         <Col1
           container="col_1_conatiner"
           container_inner="col_1_conatiner_inner"
@@ -107,7 +107,7 @@ function App() {
           points_text="col_1_points_text"
           points_txt="Your UCAS Points Total:"
           ponts_id="col_1_points_id"
-        />*/}
+        />
         {/* 2-Coll UCAS Calc 
         <Col2
           container="col_2_conatiner"
