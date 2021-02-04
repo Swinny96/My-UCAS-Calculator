@@ -1,9 +1,7 @@
 import "./App.css";
-// import UCASCalculator from "./Components/UCAS-Calculator";
-import Col1 from "./Components/Col-1";
+import UCASCalculator from "./Components/UCAS-Calculator";
+// import Col1 from "./Components/Col-1";
 // import Col2 from "./Components/Col-2";
-import "./Calculator.css";
-import "./Undergraduate.css";
 import "./CSS/Col-1.css";
 import "./CSS/Col-2.css";
 import "./CSS/Microcomponent.css";
@@ -44,36 +42,67 @@ function App() {
         /> */}
         {/* Micro-UCAS 
         <UCASCalculator
-          container="content_box"
-          container_inner="content_box_inner"
-          heading="content-box__heading"
-          header="content-box__heading"
-          meta_text="content_box_heading_meta_text"
-          text="richtext"
-          qualfication_container="qualfication_conetents"
-          qualfication_container_split="qualfication_qualfication_conetents_split"
-          qualfication_container_qualifcation="qualfication_conetent_qualfication"
-          qualfication_container_grade="qualfication_conetent_grade"
-          qualfication_text="qualfication_conetents_text"
-          select="qualfication_conetents_select"
-          add_qualfication="qualfication_conetents_add"
-          table="qualfication_table"
-          table_header="qualfication_table_header"
-          table_row="qualfication_table_row"
-          table_head="qualfication_table_head"
-          table_body="qualfication_table_body"
-          table_body_row="qualfication_table_body_row"
-          table_body_details="qualfication_table_body_details"
-          delete_qualfication="qualfication_table_delete"
-          delete_qualfication_text="qualfication_table_delete_text"
-          delete_qualfication_button="qualfication_table_delete_button"
+          container="micro_box"
+          container_inner="micro_box_inner"
+          heading="micro-box__heading"
+          header="micro-box__heading"
+          meta_text="micro_box_heading_meta_text"
+          text="micro_richtext"
+          qualfication_container="micro_qualfication_conetents"
+          qualfication_container_split="micro_qualfication_qualfication_conetents_split"
+          qualfication_container_qualifcation="micro_qualfication_conetent_qualfication"
+          qualfication_container_grade="micro_qualfication_conetent_grade"
+          qualfication_text="micro_qualfication_conetents_text"
+          select="micro_qualfication_conetents_select"
+          add_qualfication="micro_qualfication_conetents_add"
+          table="micro_qualfication_table"
+          table_header="micro_qualfication_table_header"
+          table_row="micro_qualfication_table_row"
+          table_head="micro_qualfication_table_head"
+          table_body="micro_qualfication_table_body"
+          table_body_row="micro_qualfication_table_body_row"
+          table_body_details="micro_qualfication_table_body_details"
+          delete_qualfication="micro_qualfication_table_delete"
+          delete_qualfication_text="micro_qualfication_table_delete_text"
+          delete_qualfication_button="micro_qualfication_table_delete_button"
           remove_img={remove}
-          delete_last_qualfication="qualfication_table_delete_last"
-          points="key_info key-info_items"
-          points_total="key-info_items-title-cta"
-          points_text="key_info_items_title"
+          delete_last_qualfication="micro_qualfication_table_delete_last"
+          points="micro_key_info key-info_items"
+          points_total="micro_key-info_items-title-cta"
+          points_text="micro_key_info_items_title"
         />*/}
-        {/* 1-Coll UCAS Calc */}
+        {/* Micro-Varient-UCAS */}
+        <UCASCalculator
+          container="var_content_box"
+          container_inner="var_content_box_inner"
+          heading="var_content-box__heading"
+          header="var_content-box__heading"
+          meta_text="var_content_box_heading_meta_text"
+          text="var_richtext"
+          qualfication_container="var_qualfication_conetents"
+          qualfication_container_split="var_qualfication_qualfication_conetents_split"
+          qualfication_container_qualifcation="var_qualfication_conetent_qualfication"
+          qualfication_container_grade="var_qualfication_conetent_grade"
+          qualfication_text="var_qualfication_conetents_text"
+          select="var_qualfication_conetents_select"
+          add_qualfication="var_qualfication_conetents_add"
+          table="var_qualfication_table"
+          table_header="var_qualfication_table_header"
+          table_row="var_qualfication_table_row"
+          table_head="var_qualfication_table_head"
+          table_body="var_qualfication_table_body"
+          table_body_row="var_qualfication_table_body_row"
+          table_body_details="var_qualfication_table_body_details"
+          delete_qualfication="var_qualfication_table_delete"
+          delete_qualfication_text="var_qualfication_table_delete_text"
+          delete_qualfication_button="var_qualfication_table_delete_button"
+          remove_img={remove}
+          delete_last_qualfication="var_qualfication_table_delete_last"
+          points="var_key_info key-info_items"
+          points_total="var_key-info_items-title-cta"
+          points_text="var_key_info_items_title"
+        />
+        {/* 1-Coll UCAS Calc 
         <Col1
           container="col_1_conatiner"
           container_inner="col_1_conatiner_inner"
@@ -107,7 +136,7 @@ function App() {
           points_text="col_1_points_text"
           points_txt="Your UCAS Points Total:"
           ponts_id="col_1_points_id"
-        />
+        />*/}
         {/* 2-Coll UCAS Calc 
         <Col2
           container="col_2_conatiner"

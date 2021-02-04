@@ -1,0 +1,211 @@
+body {
+  font-family: "DIN-Pro-Regular";
+  color: #131313;
+}
+.var_content_box {
+  display: flex;
+  border: 1px solid #ddd;
+  max-width: 560px;
+  background-color: #f3f3f3;
+  padding: 30px;
+}
+.var_content_box_inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.var_content-box__heading {
+  margin: 0px;
+  color: #000;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.var_richtext {
+  font-size: 0.875rem;
+  line-height: 1.57;
+  margin: 15px 0;
+  color: #767676;
+  margin-bottom: 1.875rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 768px) {
+  .var_content_box {
+    padding: 30px;
+  }
+  .var_content-box__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .var_content_box_heading_meta_text {
+    font-size: 0.875rem;
+    line-height: 1.57;
+  }
+  .var_key-info__items {
+    grid-gap: 30px;
+    grid-template-areas: "a b";
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .var_key-info_item-value {
+    font-size: 3.75rem;
+    line-height: 0.92;
+  }
+}
+@media (max-width: 768px) {
+  .var_qualfication_conetents_add {
+    width: 100% !important;
+  }
+  .var_qualfication_qualfication_conetents_split {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none !important;
+  }
+}
+.var_content_box_heading_meta_text {
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+}
+.var_qualfication_conetents {
+  display: block;
+  margin-top: 16px;
+}
+.var_qualfication_qualfication_conetents_split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.var_qualfication_conetent_qualfication {
+  display: grid;
+  grid-gap: 10px;
+  gap: 10px;
+}
+.var_qualfication_conetent_grade {
+  display: grid;
+  grid-gap: 10px;
+  gap: 10px;
+}
+.var_qualfication_conetents_text {
+  border: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.var_qualfication_conetents_select {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #767676;
+  padding: 0.6em 1.4em 0.5em 0em;
+  width: 100%;
+  max-width: 100%; /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin-top: 8px;
+  border: 0px;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("../down.svg");
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right 0.7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: 1.4em auto, 100%;
+}
+.var_qualfication_conetents_select:active,
+.var_qualfication_conetents_select:hover {
+  border-color: hsl(267, 52%, 49%);
+  outline: hsl(267, 52%, 49%);
+}
+.var_qualfication_conetents_add {
+  border: 2px solid hsl(267, 52%, 49%);
+  width: 35%;
+  padding: 15px;
+  background: hsl(267, 52%, 49%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.var_qualfication_conetents_add:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(267, 52%, 49%);
+}
+.var_qualfication_table {
+  font-size: 0.8em;
+  border-spacing: 0px;
+}
+.var_qualfication_table,
+.var_qualfication_table_body_row,
+.var_qualfication_table_body_details {
+  border: 1px solid #ddd;
+}
+.var_qualfication_table_header {
+  font-size: 1em;
+}
+.var_qualfication_table_row {
+  font-size: 1em;
+}
+.var_qualfication_table_head {
+  padding: 16px;
+}
+.var_qualfication_table_body {
+  font-size: 1em;
+}
+.var_qualfication_table_body_row {
+  font-size: 1em;
+}
+.var_qualfication_table_body_row:nth-child(1) {
+  display: none;
+}
+.var_qualfication_table_body_details {
+  padding: 16px;
+}
+.var_qualfication_table_delete {
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.var_qualfication_table_delete_text {
+  color: hsl(267, 52%, 49%);
+  font-weight: 600;
+  padding-right: 4px;
+}
+.var_qualfication_table_delete_button {
+  color: red;
+}
+.var_qualfication_table_delete_last {
+  display: none;
+}
+.var_key_info {
+  background-color: hsl(267, 52%, 49%);
+  color: hsl(0, 0%, 100%);
+  padding: 20px;
+}
+.var_key-info_items-title-cta {
+  font-family: "Aveny-T-Bold";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.var_key_info_items_title {
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+.var_key_info p {
+  font-size: 12px;
+  font-family: "DIN-Pro-Regular";
+  margin: 0px 0px 0px 6px;
+}
+#PointsID {
+  margin-right: 6px;
+}

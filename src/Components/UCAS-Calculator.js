@@ -174,19 +174,13 @@ export default class UCASCalculator extends Component {
       <div className={this.props.container} id="mainElement">
         <div className={this.props.container_inner}>
           <div className={this.props.top}>
-            <div className={this.props.left}>
-              <h4 className={this.props.header}>
-                <span className={this.props.meta_text}>
-                  UCAS Points Calculator
-                </span>
-              </h4>
+              <h4 className={this.props.header}>UCAS Points Calculator</h4>
               <p className={this.props.text}>
                 Working out your UCAS points can be a pain - especially when you
                 have different types of qualifications. Luckily, our calculator
                 is here to help. Just add your qualifications and let our UCAS
                 Calculator do the maths!
               </p>
-            </div>
             <div className={this.props.qualfication_container}>
               <div className={this.props.qualfication_container_split}>
                 <div className={this.props.qualfication_container_qualifcation}>
@@ -284,6 +278,7 @@ export default class UCASCalculator extends Component {
             <div className={this.props.points_total}>
               <strong className={this.props.ponts_id} id="PointsID"></strong>
               UCAS Points
+              <p>Your total UCAS points</p>
             </div>
           </div>
         </div>
