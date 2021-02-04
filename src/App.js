@@ -2,11 +2,12 @@ import "./App.css";
 import UCASCalculator from "./Components/UCAS-Calculator";
 import "./Calculator.css";
 import "./Undergraduate.css";
-import "./CSS/Col-1.css";
-import "./CSS/2-Coll.css";
+// import "./CSS/Col-1.css";
+import "./CSS/Col-2.css";
 import "./CSS/Microcomponent.css";
-import "./CSS/Microcomponent-2.css";
+import "./CSS/Microcomponent-Varient.css";
 import remove from "./remove.svg";
+import Col2 from "./Components/Col-2";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           points_total="key-info_items-title-cta"
           points_text="key_info_items_title"
         /> */}
+        {/* 1-Coll UCAS Calc 
         <UCASCalculator
           container="col_1_conatiner"
           container_inner="col_1_conatiner_inner"
@@ -103,67 +105,43 @@ function App() {
           points_text="col_1_points_text"
           points_txt="Your UCAS Points Total:"
           ponts_id="col_1_points_id"
+        />*/}
+        {/* 2-Coll UCAS Calc */}
+        <Col2
+          container="col_2_conatiner"
+          container_inner="col_2_conatiner_inner"
+          top="col_2_top"
+          left="col_2_left"
+          heading="col_2_heading"
+          header="col_2_header"
+          meta_text="col_2_meta_text"
+          text="col_2_text"
+          qualfication_container="col_2_qualfication"
+          qualfication_container_split="col_2_qualfication_split"
+          qualfication_container_qualifcation="col_2_qualfication_qual"
+          qualfication_container_grade="col_2_qualfication_grade"
+          qualfication_text="col_2_qualfication_text"
+          select="col_2_select"
+          add_qualfication="col_2_add"
+          bottom="col_2_bottom"
+          table="col_2_table"
+          table_header="col_2_thead"
+          table_row="col_2_tr"
+          table_head="col_2_th"
+          table_body="col_2_tbody"
+          table_body_row="col_2_tbr"
+          table_body_details="col_2_td"
+          delete_qualfication="col_2_delete"
+          delete_qualfication_text="col_2_delete_text"
+          delete_qualfication_button="col_2_delete_btn"
+          remove_img={remove}
+          delete_last_qualfication="col_2_delete_last"
+          points="col_2_points"
+          points_total="col_2_points_total"
+          points_text="col_2_points_text"
+          points_txt="Your UCAS Points Total:"
+          ponts_id="col_2_points_id"
         />
-        {/* 1-Coll UCAS Calc
-        <UCASCalculator
-          container=""
-          container_inner=""
-          heading=""
-          header=""
-          meta_text=""
-          text=""
-          qualfication_container=""
-          qualfication_container_qualifcation=""
-          qualfication_container_grade=""
-          qualfication_text=""
-          select=""
-          add_qualfication=""
-          table=""
-          table_header=""
-          table_row=""
-          table_head=""
-          table_body=""
-          table_body_row=""
-          table_body_details=""
-          delete_qualfication=""
-          delete_qualfication_text=""
-          delete_qualfication_button=""
-          remove_img={remove}
-          delete_last_qualfication=""
-          points=""
-          points_total=""
-          points_text=""
-        /> */}
-        {/* 2-Coll UCAS Calc
-        <UCASCalculator
-          container=""
-          container_inner=""
-          heading=""
-          header=""
-          meta_text=""
-          text=""
-          qualfication_container=""
-          qualfication_container_qualifcation=""
-          qualfication_container_grade=""
-          qualfication_text=""
-          select=""
-          add_qualfication=""
-          table=""
-          table_header=""
-          table_row=""
-          table_head=""
-          table_body=""
-          table_body_row=""
-          table_body_details=""
-          delete_qualfication=""
-          delete_qualfication_text=""
-          delete_qualfication_button=""
-          remove_img={remove}
-          delete_last_qualfication=""
-          points=""
-          points_total=""
-          points_text=""
-        /> */}
       </main>
     </div>
   );
