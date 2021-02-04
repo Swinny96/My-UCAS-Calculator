@@ -1,5 +1,5 @@
 import "./App.css";
-import UCASCalculator from "./Components/UCAS-Calculator";
+// import UCASCalculator from "./Components/UCAS-Calculator";
 import Col1 from "./Components/Col-1";
 // import Col2 from "./Components/Col-2";
 import "./Calculator.css";
