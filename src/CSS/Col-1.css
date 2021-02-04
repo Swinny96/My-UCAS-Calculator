@@ -132,7 +132,6 @@
   grid-template-columns: repeat(5, 1fr);
   display: grid;
   align-items: center;
-  gap: 8px;
 }
 .col_1_th {
   background-color: #fff;

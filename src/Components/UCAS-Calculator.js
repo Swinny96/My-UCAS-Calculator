@@ -26,15 +26,24 @@ export default class UCASCalculator extends Component {
     var y = document.getElementById("GradesSelection").value;
     var z = Number(x) + Number(y);
 
-    document.getElementById("PointsID").innerHTML = z;
-    const item = {
-      name: mycourse,
-      grade: mygrade,
-      points: gradeField.value,
-    };
-    this.setState({
-      rows: [...this.state.rows, item],
-    });
+    if (gradeField.selectedIndex === 0 && courseField.selectedIndex === 0) {
+      alert("Please Select a Qualfication & a Grade");
+    } else if (gradeField.selectedIndex > 0 && courseField.selectedIndex === 0){
+      alert("Please Select a Qualfication");
+    } else if (gradeField.selectedIndex === 0 && courseField.selectedIndex > 0){
+      alert("Please Select a Grade");
+    }
+    else {
+      document.getElementById("PointsID").innerHTML = z;
+      const item = {
+        name: mycourse,
+        grade: mygrade,
+        points: gradeField.value,
+      };
+      this.setState({
+        rows: [...this.state.rows, item],
+      });
+    }
   };
   handleRemoveRow = () => {
     const rows = [...this.state.rows];
