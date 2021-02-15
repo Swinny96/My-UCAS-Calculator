@@ -27,19 +27,23 @@ export default class UCASCalculator extends Component {
     var z = Number(x) + Number(y);
 
     if (gradeField.selectedIndex === 0 && courseField.selectedIndex === 0) {
-      alert("Please Select a Qualfication & a Grade");
+      document.getElementById("warning").style.display = "block";
     } else if (
       gradeField.selectedIndex > 0 &&
       courseField.selectedIndex === 0
     ) {
-      alert("Please Select a Qualfication");
+      document.getElementById("warning").style.display = "none";
+      document.getElementById("qualfication-warning").style.display = "block";
     } else if (
       gradeField.selectedIndex === 0 &&
       courseField.selectedIndex > 0
     ) {
-      alert("Please Select a Grade");
+      document.getElementById("grade-warning").style.display = "block";
     } else {
       document.getElementById("PointsID").innerHTML = z;
+      document.getElementById("warning").style.display = "none";
+      document.getElementById("qualfication-warning").style.display = "none";
+      document.getElementById("grade-warning").style.display = "none";
       const item = {
         name: mycourse,
         grade: mygrade,
@@ -174,13 +178,13 @@ export default class UCASCalculator extends Component {
       <div className={this.props.container} id="mainElement">
         <div className={this.props.container_inner}>
           <div className={this.props.top}>
-              <h4 className={this.props.header}>UCAS Points Calculator</h4>
-              <p className={this.props.text}>
-                Working out your UCAS points can be a pain - especially when you
-                have different types of qualifications. Luckily, our calculator
-                is here to help. Just add your qualifications and let our UCAS
-                Calculator do the maths!
-              </p>
+            <h4 className={this.props.header}>UCAS Points Calculator</h4>
+            <p className={this.props.text}>
+              Working out your UCAS points can be a pain - especially when you
+              have different types of qualifications. Luckily, our calculator is
+              here to help. Just add your qualifications and let our UCAS
+              Calculator do the maths!
+            </p>
             <div className={this.props.qualfication_container}>
               <div className={this.props.qualfication_container_split}>
                 <div className={this.props.qualfication_container_qualifcation}>
@@ -223,6 +227,9 @@ export default class UCASCalculator extends Component {
             >
               Add Qualfication
             </button>
+            <span id="warning">Please Select a Qualfication & a Grade</span>
+            <span id="qualfication-warning">Please Select a Qualfication</span>
+            <span id="grade-warning">Please Select a Grade</span>
           </div>
           <hr />
           <table className={this.props.table}>

@@ -1,45 +1,17 @@
 import "./App.css";
-// import UCASCalculator from "./Components/UCAS-Calculator";
+//import UCASCalculator from "./Components/UCAS-Calculator";
 import Col1 from "./Components/Col-1";
 // import Col2 from "./Components/Col-2";
 import "./CSS/Col-1.css";
-import "./CSS/Col-2.css";
-import "./CSS/Microcomponent.css";
-import "./CSS/Microcomponent-Varient.css";
+// import "./CSS/Col-2.css";
+// import "./CSS/Microcomponent.css";
+// import "./CSS/Microcomponent-Varient.css";
 import remove from "./remove.svg";
 
 function App() {
   return (
     <div className="page_container">
       <main>
-        {/* Regualr Calc
-        <UCASCalculator
-          container="container"
-          heading=""
-          header=""
-          meta_text=""
-          text=""
-          qualfication_container="qualfication_container"
-          qualfication_container_qualifcation=""
-          qualfication_container_grade=""
-          qualfication_text=""
-          select="select"
-          add_qualfication="add_qualfication"
-          table="table"
-          table_header="table_header"
-          table_row="table_row"
-          table_head="table_head"
-          table_body="table_body"
-          table_body_row="table_body_row"
-          table_body_details="table_body_details"
-          delete_qualfication="delete_qualfication"
-          delete_qualfication_text=""
-          delete_qualfication_button=""
-          delete_last_qualfication="delete_last_qualfication"
-          points="points"
-          points_total="points_total"
-          points_text="points_text"
-        /> */}
         {/* Micro-UCAS 
         <UCASCalculator
           container="micro_box"

@@ -67,6 +67,22 @@
   line-height: 22px;
 }
 
+#warning {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+#grade-warning {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+#qualfication-warning {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
 .col_2_qualfication {
   display: block;
   grid-template-columns: repeat(2, 1fr);

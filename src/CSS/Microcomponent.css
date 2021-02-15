@@ -36,6 +36,19 @@ body {
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
+
+#warning {
+  display: none;
+  color: red;
+}
+#grade-warning {
+  display: none;
+  color: red;
+}
+#qualfication-warning {
+  display: none;
+  color: red;
+}
 @media (min-width: 768px) {
   .micro_box {
     padding: 30px;

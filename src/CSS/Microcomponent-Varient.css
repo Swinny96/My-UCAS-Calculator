@@ -29,6 +29,22 @@ body {
   margin-bottom: 1.875rem;
   margin-top: 1.25rem;
 }
+
+#warning {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+#grade-warning {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+#qualfication-warning {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
 @media (min-width: 768px) {
   .var_content_box {
     padding: 30px;
