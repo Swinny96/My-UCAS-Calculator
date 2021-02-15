@@ -235,30 +235,24 @@ export default class UCASCalculator extends Component {
             <span id="grade-warning">Please Select a Grade</span>
           </div>
           <hr />
-          <table className={this.props.table}>
-            <thead className={this.props.table_header}>
-              <tr className={this.props.table_row}>
-                <th className={this.props.table_head}>#</th>
-                <th className={this.props.table_head}>Course</th>
-                <th className={this.props.table_head}>Grade</th>
-                <th className={this.props.table_head}>UCAS Points</th>
-                <th className={this.props.table_head}>Action</th>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Course</th>
+                <th>Grade</th>
+                <th>UCAS Points</th>
+                <th>Action</th>
               </tr>
             </thead>
-            <tbody className={this.props.table_body}>
+            <tbody>
               {this.state.rows.map((item, idx) => (
-                <tr key={idx} className={this.props.table_body_row}>
-                  <td className={this.props.table_body_details}>{idx}</td>
-                  <td className={this.props.table_body_details} name="name">
-                    {this.state.rows[idx].name}
-                  </td>
-                  <td className={this.props.table_body_details} name="grade">
-                    {this.state.rows[idx].grade}
-                  </td>
-                  <td className={this.props.table_body_details} name="points">
-                    {this.state.rows[idx].points}
-                  </td>
-                  <td className={this.props.table_body_details}>
+                <tr key={idx}>
+                  <td>{idx}</td>
+                  <td name="name">{this.state.rows[idx].name}</td>
+                  <td name="grade">{this.state.rows[idx].grade}</td>
+                  <td name="points">{this.state.rows[idx].points}</td>
+                  <td>
                     <button
                       className={this.props.delete_qualfication}
                       onClick={this.handleRemoveSpecificRow(idx)}
