@@ -34,10 +34,13 @@ export default class UCASCalculator extends Component {
     ) {
       document.getElementById("warning").style.display = "none";
       document.getElementById("qualfication-warning").style.display = "block";
+      document.getElementById("grade-warning").style.display = "none";
     } else if (
       gradeField.selectedIndex === 0 &&
       courseField.selectedIndex > 0
     ) {
+      document.getElementById("warning").style.display = "none";
+      document.getElementById("qualfication-warning").style.display = "none";
       document.getElementById("grade-warning").style.display = "block";
     } else {
       document.getElementById("PointsID").innerHTML = z;
